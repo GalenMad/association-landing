@@ -73,7 +73,10 @@ useSeoMeta({
       >
     </UPageSection>
 
-    <USeparator :ui="{ border: 'border-primary/30' }" />
+    <USeparator
+      :ui="{ border: 'border-primary/30' }"
+      icon="i-lucide-beer"
+    />
 
     <UPageSection
       id="features"
@@ -149,7 +152,7 @@ useSeoMeta({
 
     <UPageSection
       id="pricing"
-      class="mb-32 overflow-hidden"
+      class="overflow-hidden"
       :title="page.pricing.title"
       :description="page.pricing.description"
       :ui="{ title: 'text-left @container relative', description: 'text-left' }"
@@ -216,8 +219,19 @@ useSeoMeta({
                 size="xl"
               />
             </template>
+            <UButton
+              class="mt-4"
+              label="Подробнее"
+              variant="subtle"
+              block
+            />
           </UPageCard>
         </UPageColumns>
+        <UButton
+          class="mt-4 mx-auto flex"
+          label="Смотреть всё"
+          icon="i-lucide-newspaper"
+        />
       </UContainer>
     </UPageSection>
 

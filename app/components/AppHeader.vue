@@ -3,16 +3,16 @@ const nuxtApp = useNuxtApp()
 const { activeHeadings, updateHeadings } = useScrollspy()
 
 const items = computed(() => [{
-  label: 'Features',
-  to: '#features',
+  label: 'Концепция',
+  to: '#',
   active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('pricing')
 }, {
-  label: 'Pricing',
-  to: '#pricing',
+  label: 'Юридические штучки',
+  to: '#',
   active: activeHeadings.value.includes('pricing')
 }, {
-  label: 'Testimonials',
-  to: '#testimonials',
+  label: 'Новости',
+  to: '#',
   active: activeHeadings.value.includes('testimonials') && !activeHeadings.value.includes('pricing')
 }])
 
@@ -28,11 +28,9 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
 <template>
   <UHeader>
     <template #left>
-      <NuxtLink to="/">
-        <AppLogo class="w-auto h-6 shrink-0" />
-      </NuxtLink>
-
-      <TemplateMenu />
+      <h2 class="flex content-center">
+        <span class="text-primary">П</span>и<span class="text-primary">ВКО</span>&nbsp;<span class="iconify i-lucide:beer shrink-0 size-5" />
+      </h2>
     </template>
 
     <template #right>
@@ -43,7 +41,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
       />
 
       <UButton
-        label="Download App"
+        label="Присоединиться"
         variant="subtle"
         class="hidden lg:block"
       />
@@ -59,7 +57,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
       />
       <UButton
         class="mt-4"
-        label="Download App"
+        label="Присоединиться"
         variant="subtle"
         block
       />
