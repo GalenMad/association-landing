@@ -36,40 +36,6 @@ section:
     - title: Удержать доверие и нормальную работу в кризисах
       description: Медиация и арбитраж по правилам сети, процедуры разбора с понятными сроками и мерами восстановления, фиксация обязательств и ответственности.
       class: border-l border-default pt-4 pl-4
-features:
-  title: Уже [с нами]{.text-primary}
-  description: Кооперативы, которые подключились к общим правилам сети и используют общий слой сервисов в ежедневной работе
-  features:
-    - title: Кооператив «Зеленый Урожай»
-      description: Подключились ради совместных закупок и договоров, чтобы снизить цены и риски срыва поставок.
-      icon: i-lucide-wand-sparkles
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Потребительский кооператив «Городской Сад»
-      description: Используют витрину сети и историю сделок, чтобы выбирать «своих» по репутации и прозрачным правилам.
-      icon: i-lucide-bell-ring
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Производственный кооператив «Ремесленники»
-      description: Берут шаблоны договоров и методики, чтобы сделки работали одинаково от раза к разу и не держались на ручных договорённостях.
-      icon: i-lucide-code-xml
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Жилищный кооператив «Новый Дом»
-      description: Ценят процедуры разбора споров и поддержку в просадках, чтобы конфликт не превращался в войну и не съедал экономику.
-      icon: i-lucide-moon
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Сельскохозяйственный кооператив «Полярная Звезда»
-      description: Используют общую инфраструктуру и проверенных партнёров внутри сети, чтобы меньше тратить на поиск и проверки.
-      icon: i-lucide-mouse-pointer-2
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Кредитный кооператив «Финансовая Взаимопомощь»
-      description: "Опираются на прозрачные правила экономики общих сервисов и понятную отчётность: что собрано, на что потрачено, какой результат"
-      icon: i-lucide-chart-line
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
 steps:
   title: Используемые инструменты
   description: "Три опорных слоя сети: инициативы и проекты, рынок товаров и услуг, прозрачные взаиморасчёты и отчётность по общим сервисам"

@@ -45,9 +45,6 @@ export const collections = {
           })
         )
       }),
-      features: createBaseSchema().extend({
-        features: z.array(createFeatureSchema())
-      }),
       steps: createBaseSchema().extend({
         items: z.array(createFeatureSchema().extend({
           image: z.object({
