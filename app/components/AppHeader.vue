@@ -10,17 +10,12 @@ const items = computed(() => [{
   label: 'Юридические штучки',
   to: '#',
   active: activeHeadings.value.includes('pricing')
-}, {
-  label: 'Новости',
-  to: '#',
-  active: activeHeadings.value.includes('testimonials') && !activeHeadings.value.includes('pricing')
 }])
 
 nuxtApp.hooks.hookOnce('page:finish', () => {
   updateHeadings([
     document.querySelector('#features'),
-    document.querySelector('#pricing'),
-    document.querySelector('#testimonials')
+    document.querySelector('#pricing')
   ].filter(Boolean) as Element[])
 })
 </script>

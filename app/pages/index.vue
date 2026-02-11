@@ -187,54 +187,6 @@ useSeoMeta({
       </UPricingPlans>
     </UPageSection>
 
-    <UPageSection
-      id="testimonials"
-      :title="page.testimonials.title"
-      :description="page.testimonials.description"
-      :items="page.testimonials.items"
-    >
-      <template #headline>
-        <UColorModeImage
-          light="/images/light/line-5.svg"
-          dark="/images/dark/line-5.svg"
-          class="absolute -top-10 sm:top-0 right-1/2 h-24"
-        />
-      </template>
-      <template #title>
-        <MDC :value="page.testimonials.title" />
-      </template>
-
-      <UContainer>
-        <UPageColumns class="xl:columns-3">
-          <UPageCard
-            v-for="(testimonial, index) in page.testimonials.items"
-            :key="index"
-            variant="subtle"
-            :description="testimonial.quote"
-            :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
-          >
-            <template #footer>
-              <UUser
-                v-bind="testimonial.user"
-                size="xl"
-              />
-            </template>
-            <UButton
-              class="mt-4"
-              label="Подробнее"
-              variant="subtle"
-              block
-            />
-          </UPageCard>
-        </UPageColumns>
-        <UButton
-          class="mt-4 mx-auto flex"
-          label="Смотреть всё"
-          icon="i-lucide-newspaper"
-        />
-      </UContainer>
-    </UPageSection>
-
     <USeparator />
 
     <UPageCTA
