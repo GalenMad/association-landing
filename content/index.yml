@@ -43,18 +43,18 @@ steps:
     - title: Платформа инициатив
       description: Подача инициатив и проектов, сбор поддержки, назначение владельцев, фиксация решений и публичная история исполнения.
       image:
-        light: '/images/light/connect.svg'
-        dark: '/images/dark/connect.svg'
+        light: '/images/light/connect.webp'
+        dark: '/images/dark/connect.webp'
     - title: Кооперативный маркетплейс
       description: Витрина товаров и услуг сети, поиск проверенных партнёров, стандартизированные договоры и правила сделки, работающие одинаково в каждом кооперативе.
       image:
-        light: '/images/light/optimize.svg'
-        dark: '/images/dark/optimize.svg'
+        light: '/images/light/marketplace.webp'
+        dark: '/images/dark/marketplace.webp'
     - title: Прозрачная экономика
       description: Правила взносов и оплаты сервисов, взаиморасчёты, публикация бюджета и отчётности в понятном виде по каждому направлению.
       image:
-        light: '/images/light/track.svg'
-        dark: '/images/dark/track.svg'
+        light: '/images/light/finance.webp'
+        dark: '/images/dark/finance.webp'
 pricing:
   title: Выбери формат [участия]{.text-primary}
   description: Два входа в сеть. Можно подключиться как специалист для работы по проектам внутри сети или как кооператив, чтобы использовать общий слой сервисов и участвовать в управлении
