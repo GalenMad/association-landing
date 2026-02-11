@@ -81,6 +81,12 @@ useSeoMeta({
     <UPageSection>
       <div class="absolute rounded-full -left-10 top-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
       <div class="absolute rounded-full -right-10 -bottom-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
+      <template #title>
+        <MDC value="Маршрут развития" />
+      </template>
+      <div class="mx-auto w-full max-w-3xl px-4 text-center">
+        <OurTimeline />
+      </div>
     </UPageSection>
 
     <USeparator :ui="{ border: 'border-primary/30' }" />

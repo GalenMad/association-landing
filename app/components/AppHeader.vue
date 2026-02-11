@@ -1,23 +1,11 @@
 <script setup lang="ts">
-const nuxtApp = useNuxtApp()
-const { activeHeadings, updateHeadings } = useScrollspy()
+const route = useRoute()
 
 const items = computed(() => [{
   label: 'Концепция',
-  to: '#',
-  active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('pricing')
-}, {
-  label: 'Юридические штучки',
-  to: '#',
-  active: activeHeadings.value.includes('pricing')
+  to: '/concept',
+  active: route.path.startsWith('/concept')
 }])
-
-nuxtApp.hooks.hookOnce('page:finish', () => {
-  updateHeadings([
-    document.querySelector('#features'),
-    document.querySelector('#pricing')
-  ].filter(Boolean) as Element[])
-})
 </script>
 
 <template>
