@@ -15,7 +15,7 @@ const items = computed(() => [{
         <UColorModeImage
           light="/logos/logo-v1-full_light.svg"
           dark="/logos/logo-v1-full_dark.svg"
-          class="h-[45px]"
+          class="h-[52px]"
         />
       </NuxtLink>
     </template>

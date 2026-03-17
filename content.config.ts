@@ -26,7 +26,7 @@ const createFeatureSchema = () => createBaseSchema().extend({
 })
 
 export const collections = {
-  content: defineCollection({
+  home: defineCollection({
     source: 'index.yml',
     type: 'page',
     schema: z.object({
@@ -66,5 +66,10 @@ export const collections = {
         links: z.array(createLinkSchema())
       })
     })
+  }),
+  concept: defineCollection({
+    type: 'page',
+    source: '**/*.md'
   })
+
 }

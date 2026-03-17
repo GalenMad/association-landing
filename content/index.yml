@@ -7,7 +7,7 @@ hero:
   logo: '/logos/logo.svg'
   links:
     - label: Стать участником
-      icon: i-lucide-magnet
+      icon: i-lucide-rocket
       color: primary
       size: xl
       to: '#pricing'
