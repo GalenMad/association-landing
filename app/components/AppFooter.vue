@@ -2,7 +2,7 @@
 
 <template>
   <USeparator
-    icon="i-lucide-beer"
+    icon="i-mdi-hops"
     class="h-px"
   />
 

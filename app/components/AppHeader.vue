@@ -11,9 +11,11 @@ const items = computed(() => [{
 <template>
   <UHeader>
     <template #left>
-      <h2 class="flex content-center">
-        <span class="text-primary">П</span>и<span class="text-primary">ВКО</span>&nbsp;<span class="iconify i-lucide:beer shrink-0 size-5" />
-      </h2>
+      <UColorModeImage
+        light="/logos/logo-v1-full_light.svg"
+        dark="/logos/logo-v1-full_dark.svg"
+        class="h-[45px]"
+      />
     </template>
 
     <template #right>

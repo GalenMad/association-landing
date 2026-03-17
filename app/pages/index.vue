@@ -30,7 +30,7 @@ useSeoMeta({
       :links="page.hero.links"
       :ui="{
         container: 'md:pt-18 lg:pt-20',
-        title: 'max-w-3xl mx-auto'
+        title: 'max-w-1xl mx-auto'
       }"
     >
       <template #top>
@@ -75,7 +75,7 @@ useSeoMeta({
 
     <USeparator
       :ui="{ border: 'border-primary/30' }"
-      icon="i-lucide-beer"
+      icon="i-mdi-hops"
     />
 
     <UPageSection>

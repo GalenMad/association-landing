@@ -3,6 +3,35 @@
 
 @source "../../../content/**/*";
 
-@theme {
-  --font-sans: 'Public Sans', sans-serif;
+@theme static {
+  --font-heading: "Montserrat", sans-serif;
+  --color-brand-50: #F4FBEA;
+  --color-brand-100: #E7F6CF;
+  --color-brand-200: #D4EEA8;
+  --color-brand-300: #BEE57E;
+  --color-brand-400: #A4DB5C;
+  --color-brand-500: #8BCF3F;
+  --color-brand-600: #74B230;
+  --color-brand-700: #5E9227;
+  --color-brand-800: #4B7421;
+  --color-brand-900: #3B5B1B;
+  --color-brand-950: #243A10;
+}
+
+.light {
+--color-brand-50: #E6F4EC;
+--color-brand-100: #C3E6D2;
+--color-brand-200: #9ED6B6;
+--color-brand-300: #78C69A;
+--color-brand-400: #57B885;
+--color-brand-500: #0F6A3B;
+--color-brand-600: #0D5F35;
+--color-brand-700: #0B512D;
+--color-brand-800: #094426;
+--color-brand-900: #07361E;
+--color-brand-950: #042112;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
