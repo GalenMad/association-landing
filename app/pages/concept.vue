@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ButtonProps } from '@nuxt/ui'
+
 const { data: concept } = await useAsyncData('concept', () =>
   queryCollection('concept').path('/concept').first()
 )
@@ -38,7 +40,7 @@ const items = computed(() => [
     variant: 'subtle',
     target: '_blank'
   }
-])
+] satisfies ButtonProps[])
 </script>
 
 <template>
