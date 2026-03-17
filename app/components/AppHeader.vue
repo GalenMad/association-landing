@@ -11,11 +11,13 @@ const items = computed(() => [{
 <template>
   <UHeader>
     <template #left>
-      <UColorModeImage
-        light="/logos/logo-v1-full_light.svg"
-        dark="/logos/logo-v1-full_dark.svg"
-        class="h-[45px]"
-      />
+      <NuxtLink to="/">
+        <UColorModeImage
+          light="/logos/logo-v1-full_light.svg"
+          dark="/logos/logo-v1-full_dark.svg"
+          class="h-[45px]"
+        />
+      </NuxtLink>
     </template>
 
     <template #right>
@@ -29,6 +31,7 @@ const items = computed(() => [{
         label="Присоединиться"
         variant="subtle"
         class="hidden lg:block"
+        to="/#pricing"
       />
 
       <UColorModeButton />

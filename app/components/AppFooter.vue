@@ -2,7 +2,7 @@
 
 <template>
   <USeparator
-    icon="i-mdi-hops"
+    icon="i-lucide-hop"
     class="h-px"
   />
 

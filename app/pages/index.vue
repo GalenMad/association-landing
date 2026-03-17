@@ -75,7 +75,7 @@ useSeoMeta({
 
     <USeparator
       :ui="{ border: 'border-primary/30' }"
-      icon="i-mdi-hops"
+      icon="i-lucide-hop"
     />
 
     <!-- <UPageSection>
@@ -166,7 +166,7 @@ useSeoMeta({
 
     <USeparator />
 
-    <UPageCTA
+    <!-- <UPageCTA
       v-bind="page.cta"
       variant="naked"
       class="overflow-hidden @container"
@@ -189,6 +189,6 @@ useSeoMeta({
       </template>
 
       <LazyStarsBg />
-    </UPageCTA>
+    </UPageCTA> -->
   </div>
 </template>

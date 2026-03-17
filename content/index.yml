@@ -7,19 +7,25 @@ hero:
   logo: '/logos/logo.svg'
   links:
     - label: Стать участником
-      icon: i-lucide-arrow-right
-      trailing: true
+      icon: i-lucide-magnet
       color: primary
-      to: https://docs.google.com/document/d/19cJKeW0azxMZneOpNDqqouUOUSpO5n_1fUyQS90hCQM
-      target: _blank
       size: xl
+      to: '#pricing'
+      trailing: true
+    - label: Наша концепция
+      icon: i-lucide-hop
+      size: xl
+      color: primary
+      to: '/concept'
+      trailing: true
     - label: Написать нам
       icon: i-simple-icons-telegram
       size: xl
-      color: neutral
-      variant: outline
-      to: https://docs.google.com/document/d/19cJKeW0azxMZneOpNDqqouUOUSpO5n_1fUyQS90hCQM
+      color: 'neutral'
+      variant: 'subtle'
+      to: '/'
       target: _blank
+      trailing: true
 section:
   title: 'Цели и задачи [Ассоциации]{.text-primary}'
   description: "Ассоциация снимает «налог одиночества» с кооперативов: выносит повторяющиеся дорогие задачи в общий слой и делает межкооперативную работу предсказуемой"
