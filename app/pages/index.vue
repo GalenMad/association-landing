@@ -62,12 +62,12 @@ useSeoMeta({
         />
       </template>
       <img
-        :src="page.section.images.desktop"
+        :src="page.section.image"
         :alt="page.section.title"
         class="hidden lg:block 2xl:hidden left-0 w-full max-w-2xl"
       >
       <img
-        :src="page.section.images.mobile"
+        :src="page.section.image"
         :alt="page.section.title"
         class="block lg:hidden 2xl:block 2xl:w-full 2xl:max-w-2xl"
       >
@@ -78,7 +78,7 @@ useSeoMeta({
       icon="i-mdi-hops"
     />
 
-    <UPageSection>
+    <!-- <UPageSection>
       <div class="absolute rounded-full -left-10 top-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
       <div class="absolute rounded-full -right-10 -bottom-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
       <template #title>
@@ -89,20 +89,13 @@ useSeoMeta({
       </div>
     </UPageSection>
 
-    <USeparator :ui="{ border: 'border-primary/30' }" />
+    <USeparator :ui="{ border: 'border-primary/30' }" /> -->
 
     <UPageSection
       id="steps"
       :description="page.steps.description"
       class="relative overflow-hidden"
     >
-      <template #headline>
-        <UColorModeImage
-          light="/images/light/line-3.svg"
-          dark="/images/dark/line-3.svg"
-          class="absolute -top-10 sm:top-0 right-1/2 h-24"
-        />
-      </template>
       <template #title>
         <MDC :value="page.steps.title" />
       </template>
@@ -122,7 +115,7 @@ useSeoMeta({
             class="size-full"
           />
 
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2 mt-auto">
             <span class="text-lg font-semibold">
               {{ step.title }}
             </span>
