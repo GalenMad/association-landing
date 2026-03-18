@@ -47,6 +47,7 @@ const items = computed(() => [{
         class="mt-4"
         label="Присоединиться"
         variant="subtle"
+        to="/#pricing"
         block
       />
     </template>

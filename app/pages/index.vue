@@ -164,7 +164,7 @@ useSeoMeta({
       </UPricingPlans>
     </UPageSection>
 
-    <USeparator />
+    <!-- <USeparator /> -->
 
     <!-- <UPageCTA
       v-bind="page.cta"
