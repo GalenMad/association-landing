@@ -31,6 +31,9 @@ export const collections = {
     type: 'page',
     schema: z.object({
       hero: z.object({
+        headline: z.string(),
+        title: z.string(),
+        description: z.string(),
         links: z.array(createLinkSchema())
       }),
       section: createBaseSchema().extend({

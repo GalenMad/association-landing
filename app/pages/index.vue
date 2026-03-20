@@ -26,11 +26,12 @@ useSeoMeta({
     </div>
 
     <UPageHero
-      :description="page.description"
+      :description="page.hero.description"
+      :headline="page.hero.headline"
       :links="page.hero.links"
       :ui="{
         container: 'md:pt-18 lg:pt-20',
-        title: 'max-w-1xl mx-auto'
+        title: 'max-w-1xl mx-auto hero-title'
       }"
     >
       <template #top>
@@ -39,7 +40,7 @@ useSeoMeta({
 
       <template #title>
         <MDC
-          :value="page.title"
+          :value="page.hero.title"
           unwrap="p"
         />
       </template>
@@ -192,3 +193,11 @@ useSeoMeta({
     </UPageCTA> -->
   </div>
 </template>
+
+<style>
+  @media(max-width: 450px) {
+    .hero-title {
+      font-size: 2.4rem;
+    }
+  }
+</style>
