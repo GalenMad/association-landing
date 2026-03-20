@@ -1,8 +1,44 @@
 <script setup lang="ts">
+import type { BlogPostProps } from '@nuxt/ui'
+
 const { data: page } = await useAsyncData('index', () => queryCollection('home').first())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
+
+const posts = ref<BlogPostProps[]>([
+  {
+    title: 'Модель участия и минимальные требования',
+    description: `Зафиксировать типы участия: кооператив, рабочий участник, сторонник, партнёр.
+    Отдельно описать минимальные требования к прозрачности,
+    ответственности, базовой проверке и входу в сеть.`,
+    image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png',
+    badge: {
+      label: 'Работа в процессе',
+      color: 'primary',
+      variant: 'solid'
+    }
+  },
+  {
+    title: 'Система метрик и публичной отчётности',
+    description: `Зафиксировать регулярные метрики: число активных кооперативов,
+    объём сделок и совместных проектов,
+    качество разбора споров, базовую устойчивость участников сети.`,
+    image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png',
+    badge: {
+      label: 'В очереди'
+    }
+  },
+  {
+    title: 'Минимальный пакет документов',
+    description: `Подготовить черновики устава, правил участия, базового соглашения сети, порядка принятия решений,
+    регламента рабочих групп и минимального набора типовых документов для пилота.`,
+    image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png',
+    badge: {
+      label: 'В очереди'
+    }
+  }
+])
 
 useSeoMeta({
   title: page.value.seo?.title || page.value.title,
@@ -46,12 +82,21 @@ useSeoMeta({
       </template>
     </UPageHero>
 
+    <USeparator
+      :ui="{
+        border: 'border-primary/30',
+        icon: 'size-8'
+      }"
+      class="lg:hidden"
+      icon="line-md:chevron-small-triple-down"
+    />
+
     <UPageSection
       :description="page.section.description"
       :features="page.section.features"
       orientation="horizontal"
       :ui="{
-        container: 'lg:px-0 2xl:px-20 mx-0 max-w-none md:mr-10',
+        container: 'lg:px-8 2xl:px-20 mx-0 max-w-none md:mr-10',
         features: 'gap-0'
       }"
       reverse
@@ -62,35 +107,21 @@ useSeoMeta({
           class="sm:*:leading-11"
         />
       </template>
-      <img
-        :src="page.section.image"
-        :alt="page.section.title"
-        class="hidden lg:block 2xl:hidden left-0 w-full max-w-2xl"
-      >
-      <img
-        :src="page.section.image"
-        :alt="page.section.title"
-        class="block lg:hidden 2xl:block 2xl:w-full 2xl:max-w-2xl"
-      >
+      <div class="hidden lg:block">
+        <UColorModeImage
+          v-if="page.section.image"
+          :light="page.section.image?.light"
+          :dark="page.section.image?.dark"
+          :alt="page.section.title"
+          class="size-full"
+        />
+      </div>
     </UPageSection>
 
     <USeparator
       :ui="{ border: 'border-primary/30' }"
       icon="i-lucide-hop"
     />
-
-    <!-- <UPageSection>
-      <div class="absolute rounded-full -left-10 top-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
-      <div class="absolute rounded-full -right-10 -bottom-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
-      <template #title>
-        <MDC value="Маршрут развития" />
-      </template>
-      <div class="mx-auto w-full max-w-3xl px-4 text-center">
-        <OurTimeline />
-      </div>
-    </UPageSection>
-
-    <USeparator :ui="{ border: 'border-primary/30' }" /> -->
 
     <UPageSection
       id="steps"
@@ -128,6 +159,49 @@ useSeoMeta({
       </template>
     </UPageSection>
 
+    <USeparator :ui="{ border: 'border-primary/30' }" />
+
+    <UPageSection
+      id="roadmap"
+      icon="i-lucide-flag"
+      :ui="{
+        leadingIcon: 'mr-[12px] mt-[8px]'
+      }"
+      title="Маршрут развития"
+      description="Ключевые этапы запуска и развития ассоциации на ближайший период"
+      class="relative overflow-hidden"
+    >
+      <template #headline>
+        <UColorModeImage
+          light="/images/light/line-3.svg"
+          dark="/images/dark/line-3.svg"
+          class="absolute -top-10 sm:top-0 right-1/2 h-24"
+        />
+      </template>
+      <div class="absolute rounded-full -left-10 top-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
+      <div class="absolute rounded-full -right-10 -bottom-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
+
+      <div class="grid grid-cols-1 lg:gap-12 lg:grid-cols-2 w-full">
+        <div
+          class="order-2 lg:order-1"
+        >
+          <h3 class="text-lg font-semibold tracking-tight text-highlighted sm:text-xl mb-[3rem]">
+            Задачи текущего этапа
+          </h3>
+          <UBlogPosts
+            orientation="vertical"
+            :posts="posts"
+          />
+        </div>
+
+        <div class="order-1 flex flex-col items-center lg:order-2 lg:items-start">
+          <OurTimeline />
+        </div>
+      </div>
+    </UPageSection>
+
+    <USeparator :ui="{ border: 'border-primary/30' }" />
+
     <UPageSection
       id="pricing"
       class="overflow-hidden"
@@ -163,34 +237,22 @@ useSeoMeta({
           :button="plan.button"
         />
       </UPricingPlans>
+      <UCard variant="subtle">
+        <template #header>
+          <div class="text-highlighted text-2xl sm:text-3xl text-pretty font-semibold mb-2">
+            Для сочувствующих
+          </div>
+          <div class="text-muted text-base text-pretty mt-2">
+            Для тех, кто разделяет идею ассоциации и хочет помочь её запуску деньгами. <br>
+            Такая поддержка не менее важна для нас, она ускоряет развитие общей инфраструктуры
+          </div>
+        </template>
+
+        <template #footer>
+          <Placeholder class="h-8" />
+        </template>
+      </UCard>
     </UPageSection>
-
-    <!-- <USeparator /> -->
-
-    <!-- <UPageCTA
-      v-bind="page.cta"
-      variant="naked"
-      class="overflow-hidden @container"
-    >
-      <template #title>
-        <MDC :value="page.cta.title" />
-
-        <div class="@max-[1280px]:hidden">
-          <UColorModeImage
-            light="/images/light/line-6.svg"
-            dark="/images/dark/line-6.svg"
-            class="absolute left-10 -top-10 sm:top-0 h-full"
-          />
-          <UColorModeImage
-            light="/images/light/line-7.svg"
-            dark="/images/dark/line-7.svg"
-            class="absolute right-0 bottom-0 h-full"
-          />
-        </div>
-      </template>
-
-      <LazyStarsBg />
-    </UPageCTA> -->
   </div>
 </template>
 

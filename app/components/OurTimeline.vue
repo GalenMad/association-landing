@@ -14,7 +14,7 @@ const items: TimelineItem[] = [
     `
   },
   {
-    date: 'Февраль 2026',
+    date: 'Март 2026',
     title: 'Сайт-визитка',
     icon: 'i-lucide-code',
     value: 'landing',
@@ -43,12 +43,12 @@ const items: TimelineItem[] = [
     description: `
       Набираем ограниченную пилотную группу кооперативов
       и прогоняем несколько типовых взаимодействий:
-      обмен услугами, совместные закупки, разбор с
-      порных случаев по процедуре
+      обмен услугами, совместные закупки, разбор
+      спорных случаев по процедуре
     `
   },
   {
-    date: 'Август 2026',
+    date: 'Октябрь 2026',
     title: 'Учреждение и запуск',
     icon: 'i-lucide-land-plot',
     value: 'launching',
@@ -65,8 +65,7 @@ const items: TimelineItem[] = [
 <template>
   <UTimeline
     :items="items"
-    :default-value="1"
-    :ui="{ item: 'even:flex-row-reverse even:-translate-x-[calc(100%-2rem)] even:text-right odd:text-left' }"
-    class="translate-x-[calc(50%-1rem)] w-96"
+    :default-value="2"
+    class="w-96"
   />
 </template>

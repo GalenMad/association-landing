@@ -9,7 +9,8 @@ useHead({
     { key: 'theme-color', name: 'theme-color', content: color }
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    { rel: 'icon', href: '/favicon.svg' },
+    { rel: 'icon', href: '/favicon.png' }
   ],
   htmlAttrs: {
     lang: 'en'

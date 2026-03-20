@@ -38,7 +38,10 @@ export const collections = {
       }),
       section: createBaseSchema().extend({
         headline: z.string().optional(),
-        image: z.string(),
+        image: z.object({
+          light: z.string().editor({ input: 'media' }),
+          dark: z.string().editor({ input: 'media' })
+        }).optional(),
         features: z.array(
           createBaseSchema().extend({
             icon: z.string().editor({ input: 'icon' })
