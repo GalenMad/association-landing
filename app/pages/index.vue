@@ -80,6 +80,23 @@ useSeoMeta({
           unwrap="p"
         />
       </template>
+
+      <template #links>
+        <template
+          v-for="link, index in page.hero.links"
+          :key="index"
+        >
+          <UButton
+            v-bind="link"
+          />
+        </template>
+        <ContactUsModal>
+          <UButton
+            v-bind="page.hero.contact"
+            @click.prevent
+          />
+        </ContactUsModal>
+      </template>
     </UPageHero>
 
     <USeparator
@@ -92,8 +109,8 @@ useSeoMeta({
     />
 
     <UPageSection
-      :description="page.section.description"
-      :features="page.section.features"
+      :description="page.targets.description"
+      :features="page.targets.features"
       orientation="horizontal"
       :ui="{
         container: 'lg:px-8 2xl:px-20 mx-0 max-w-none md:mr-10',
@@ -103,16 +120,16 @@ useSeoMeta({
     >
       <template #title>
         <MDC
-          :value="page.section.title"
+          :value="page.targets.title"
           class="sm:*:leading-11"
         />
       </template>
       <div class="hidden lg:block">
         <UColorModeImage
-          v-if="page.section.image"
-          :light="page.section.image?.light"
-          :dark="page.section.image?.dark"
-          :alt="page.section.title"
+          v-if="page.targets.image"
+          :light="page.targets.image?.light"
+          :dark="page.targets.image?.dark"
+          :alt="page.targets.title"
           class="size-full"
         />
       </div>
@@ -124,17 +141,17 @@ useSeoMeta({
     />
 
     <UPageSection
-      id="steps"
-      :description="page.steps.description"
+      id="advantages"
+      :description="page.advantages.description"
       class="relative overflow-hidden"
     >
       <template #title>
-        <MDC :value="page.steps.title" />
+        <MDC :value="page.advantages.title" />
       </template>
 
       <template #features>
         <UPageCard
-          v-for="(step, index) in page.steps.items"
+          v-for="(step, index) in page.advantages.items"
           :key="index"
           class="group"
           :ui="{ container: 'p-4 sm:p-4', title: 'flex items-center gap-1' }"
@@ -224,14 +241,14 @@ useSeoMeta({
     <USeparator :ui="{ border: 'border-primary/30' }" />
 
     <UPageSection
-      id="pricing"
+      id="participation"
       class="overflow-hidden"
-      :title="page.pricing.title"
-      :description="page.pricing.description"
+      :title="page.participation.title"
+      :description="page.participation.description"
       :ui="{ title: 'text-left @container relative', description: 'text-left' }"
     >
       <template #title>
-        <MDC :value="page.pricing.title" />
+        <MDC :value="page.participation.title" />
 
         <div class="hidden @min-[1120px]:block">
           <UColorModeImage
@@ -244,7 +261,7 @@ useSeoMeta({
 
       <UPricingPlans scale>
         <UPricingPlan
-          v-for="(plan, index) in page.pricing.plans"
+          v-for="(plan, index) in page.participation.methods"
           :key="index"
           :title="plan.title"
           :description="plan.description"
@@ -256,7 +273,16 @@ useSeoMeta({
           variant="soft"
           :features="plan.features"
           :button="plan.button"
-        />
+        >
+          <template #button>
+            <ContactUsModal>
+              <UButton
+                v-bind="plan.button"
+                @click.prevent
+              />
+            </ContactUsModal>
+          </template>
+        </UPricingPlan>
       </UPricingPlans>
       <UCard variant="subtle">
         <template #header>
@@ -267,10 +293,6 @@ useSeoMeta({
             Для тех, кто разделяет идею ассоциации и хочет помочь её запуску деньгами. <br>
             Такая поддержка не менее важна для нас, она ускоряет развитие общей инфраструктуры
           </div>
-        </template>
-
-        <template #footer>
-          <Placeholder class="h-8" />
         </template>
       </UCard>
     </UPageSection>

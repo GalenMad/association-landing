@@ -21,7 +21,7 @@ useSeoMeta({
 const items = computed(() => [
   {
     label: 'Стать участником',
-    to: '/#pricing',
+    to: '/#participation',
     icon: 'i-lucide-rocket',
     trailing: true
   },
@@ -30,17 +30,16 @@ const items = computed(() => [
     to: '/#roadmap',
     icon: 'i-lucide-flag',
     trailing: true
-  },
-  {
-    label: 'Написать нам',
-    to: '/',
-    icon: 'i-simple-icons-telegram',
-    trailing: true,
-    color: 'neutral',
-    variant: 'subtle',
-    target: '_blank'
   }
 ] satisfies ButtonProps[])
+
+const contactUsButton = {
+  label: 'Написать нам',
+  icon: 'i-simple-icons-telegram',
+  trailing: true,
+  color: 'neutral',
+  variant: 'subtle'
+} satisfies ButtonProps
 </script>
 
 <template>
@@ -90,6 +89,19 @@ const items = computed(() => [
             class="absolute right-0 bottom-0 h-full"
           />
         </div>
+      </template>
+      <template #links>
+        <UButton
+          v-for="item, index in items"
+          :key="index"
+          v-bind="item"
+        />
+        <ContactUsModal>
+          <UButton
+            v-bind="contactUsButton"
+            @click.prevent
+          />
+        </ContactUsModal>
       </template>
 
       <LazyStarsBg />

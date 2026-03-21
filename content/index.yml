@@ -11,7 +11,7 @@ hero:
       icon: i-lucide-rocket
       color: primary
       size: xl
-      to: '#pricing'
+      to: '#participation'
       trailing: true
     - label: Наша концепция
       icon: i-lucide-hop
@@ -19,15 +19,16 @@ hero:
       color: primary
       to: '/concept'
       trailing: true
-    - label: Написать нам
-      icon: i-simple-icons-telegram
+  contact:
+      label: Написать нам
+      icon: i-lucide-mail
       size: xl
       color: 'neutral'
       variant: 'subtle'
       to: '/'
       target: _blank
       trailing: true
-section:
+targets:
   title: 'Цели и задачи [Ассоциации]{.text-primary}'
   description: "Ассоциация снимает «налог одиночества» с кооперативов: выносит повторяющиеся дорогие задачи в общий слой и делает межкооперативную работу предсказуемой"
   image: {
@@ -44,7 +45,7 @@ section:
     - title: Удержать доверие и нормальную работу в кризисах
       description: Медиация и арбитраж по правилам сети, процедуры разбора с понятными сроками и мерами восстановления, фиксация обязательств и ответственности.
       class: border-l border-default pt-4 pl-4
-steps:
+advantages:
   title: Используемые инструменты
   description: "Три опорных слоя сети: инициативы и проекты, рынок товаров и услуг, прозрачные взаиморасчёты и отчётность по общим сервисам"
   items:
@@ -63,10 +64,10 @@ steps:
       image:
         light: '/images/light/finance.svg'
         dark: '/images/dark/finance.svg'
-pricing:
+participation:
   title: Выбери формат [участия]{.text-primary}
   description: "Сеть строится и запускается вместе с первыми участниками. На входе вы получите доступ к существующей инфраструктуре и сможете влиять на то, какими станут правила, сервисы и механизмы работы"
-  plans:
+  methods:
     - title: Специалист
       description: Для экспертов и команд, которые хотят работать внутри сети по понятным договорам, правилам и с предсказуемым потоком задач
       features:
@@ -94,16 +95,3 @@ pricing:
         label: Участвовать
         variant: subtle
         to: '#'
-cta:
-  title: Юридическая информация
-  description: "Здесь собраны устав, порядки сети и материалы для участников: принципы, требования к прозрачности, правила использования общих средств, процедуры разбора спорных ситуаций"
-  links:
-    - label: Уставные документы
-      to: https://docs.google.com/document/d/19cJKeW0azxMZneOpNDqqouUOUSpO5n_1fUyQS90hCQM
-      target: _blank
-      trailingIcon: i-lucide-scale
-    - label: Для участников
-      to: https://docs.google.com/document/d/19cJKeW0azxMZneOpNDqqouUOUSpO5n_1fUyQS90hCQM
-      target: _blank
-      variant: subtle
-      trailingIcon: i-lucide-handshake

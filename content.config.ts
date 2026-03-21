@@ -34,9 +34,10 @@ export const collections = {
         headline: z.string(),
         title: z.string(),
         description: z.string(),
-        links: z.array(createLinkSchema())
+        links: z.array(createLinkSchema()),
+        contact: createLinkSchema()
       }),
-      section: createBaseSchema().extend({
+      targets: createBaseSchema().extend({
         headline: z.string().optional(),
         image: z.object({
           light: z.string().editor({ input: 'media' }),
@@ -48,7 +49,7 @@ export const collections = {
           })
         )
       }),
-      steps: createBaseSchema().extend({
+      advantages: createBaseSchema().extend({
         items: z.array(createFeatureSchema().extend({
           image: z.object({
             light: z.string().editor({ input: 'media' }),
@@ -56,8 +57,8 @@ export const collections = {
           }).optional()
         }))
       }),
-      pricing: createBaseSchema().extend({
-        plans: z.array(
+      participation: createBaseSchema().extend({
+        methods: z.array(
           createBaseSchema().extend({
             price: z.string().nonempty(),
             button: createLinkSchema(),

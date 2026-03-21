@@ -31,7 +31,7 @@ const items = computed(() => [{
         label="Присоединиться"
         variant="subtle"
         class="hidden lg:block"
-        to="/#pricing"
+        to="/#participation"
       />
 
       <UColorModeButton />
@@ -47,7 +47,6 @@ const items = computed(() => [{
         class="mt-4"
         label="Присоединиться"
         variant="subtle"
-        to="/#pricing"
         block
       />
     </template>
