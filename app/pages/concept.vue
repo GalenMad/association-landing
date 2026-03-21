@@ -35,7 +35,7 @@ const items = computed(() => [
 
 const contactUsButton = {
   label: 'Написать нам',
-  icon: 'i-simple-icons-telegram',
+  icon: 'i-lucide-mail',
   trailing: true,
   color: 'neutral',
   variant: 'subtle'
