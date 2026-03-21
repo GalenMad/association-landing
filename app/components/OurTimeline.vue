@@ -14,7 +14,7 @@ const items: TimelineItem[] = [
     `
   },
   {
-    date: 'Март 2026',
+    date: 'Январь 2026',
     title: 'Сайт-визитка',
     icon: 'i-lucide-code',
     value: 'landing',
@@ -25,7 +25,7 @@ const items: TimelineItem[] = [
     `
   },
   {
-    date: 'Апрель 2026',
+    date: 'Март 2026',
     title: 'Правила участия и минимальный пакет документов',
     icon: 'i-lucide-scale',
     value: 'law',

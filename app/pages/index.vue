@@ -1,44 +1,44 @@
 <script setup lang="ts">
-import type { BlogPostProps } from '@nuxt/ui'
-
 const { data: page } = await useAsyncData('index', () => queryCollection('home').first())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 
-const posts = ref<BlogPostProps[]>([
+const list = [
   {
-    title: 'Модель участия и минимальные требования',
-    description: `Зафиксировать типы участия: кооператив, рабочий участник, сторонник, партнёр.
-    Отдельно описать минимальные требования к прозрачности,
-    ответственности, базовой проверке и входу в сеть.`,
-    image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png',
-    badge: {
-      label: 'Работа в процессе',
-      color: 'primary',
-      variant: 'solid'
-    }
+    title: 'Модель участия',
+    description: `
+      Описать, кто и как может входить в Ассоциацию: кооператив, физлицо-сторонник, рабочая группа, инициатор.
+      Зафиксировать формат участия для каждой роли
+    `,
+    icon: 'lucide:pencil-ruler',
+    badge: 'Роли и статусы'
   },
   {
-    title: 'Система метрик и публичной отчётности',
-    description: `Зафиксировать регулярные метрики: число активных кооперативов,
-    объём сделок и совместных проектов,
-    качество разбора споров, базовую устойчивость участников сети.`,
-    image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png',
-    badge: {
-      label: 'В очереди'
-    }
+    title: 'Независимая инфраструктура',
+    description: `
+      Создаём свою минимальную инфру, чтобы Ассоциация могла координироваться и поддерживать связь независимо от внешних платформ и сбоев
+    `,
+    icon: 'lucide:brain-circuit',
+    badge: 'Техническая часть'
+  },
+  {
+    title: 'Правила прозрачности и ответственности',
+    description: `
+      Зафиксировать, какие обязательства участник берёт на себя перед Ассоциацией и другими участниками
+    `,
+    icon: 'lucide:brain-circuit',
+    badge: 'Общие обязательства'
   },
   {
     title: 'Минимальный пакет документов',
-    description: `Подготовить черновики устава, правил участия, базового соглашения сети, порядка принятия решений,
-    регламента рабочих групп и минимального набора типовых документов для пилота.`,
-    image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png',
-    badge: {
-      label: 'В очереди'
-    }
+    description: `
+      Подготовить минимальный комплект правил, положений, форм и порядков, который нужен для входа в Ассоциацию и работы в пилоте
+    `,
+    icon: 'lucide:landmark',
+    badge: 'Регламенты и формы'
   }
-])
+]
 
 useSeoMeta({
   title: page.value.seo?.title || page.value.title,
@@ -185,16 +185,37 @@ useSeoMeta({
         <div
           class="order-2 lg:order-1"
         >
-          <h3 class="text-lg font-semibold tracking-tight text-highlighted sm:text-xl mb-[3rem]">
+          <h3 class="text-2xl sm:text-3xl lg:text-3xl text-pretty tracking-tight font-bold text-highlighted text-center mb-[3rem]">
             Задачи текущего этапа
           </h3>
-          <UBlogPosts
-            orientation="vertical"
-            :posts="posts"
-          />
+          <div class="grid grid-cols-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:sm:grid-cols-2 gap-6">
+            <UCard
+              v-for="item, index in list"
+              :key="index"
+              variant="subtle"
+            >
+              <UBadge
+                class="mb-[1rem]"
+                color="neutral"
+                variant="outline"
+              >
+                {{ item.badge }}
+              </UBadge>
+              <div class="text-xl text-pretty font-semibold text-highlighted mb-[1rem]">
+                <UIcon
+                  :name="item.icon"
+                  class="size-5 align-middle"
+                />
+                {{ item.title }}
+              </div>
+              <div class="text-base text-pretty text-muted">
+                {{ item.description }}
+              </div>
+            </UCard>
+          </div>
         </div>
 
-        <div class="order-1 flex flex-col items-center lg:order-2 lg:items-start">
+        <div class="order-1 flex flex-col items-center lg:order-2 lg:items-start mb-[3rem] lg:mb-0">
           <OurTimeline />
         </div>
       </div>
