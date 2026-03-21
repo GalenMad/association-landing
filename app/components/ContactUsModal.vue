@@ -1,6 +1,7 @@
 <template>
   <UModal
     title="Написать нам"
+    description="Мы постараемся ответить вам в ближайшее время"
   >
     <slot />
     <template #body>

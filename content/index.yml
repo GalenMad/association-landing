@@ -81,7 +81,6 @@ participation:
         label: Участвовать
         color: neutral
         variant: outline
-        to: '#'
     - title: Кооператив
       description: Для кооперативов, которым нужен общий слой договоров, сервисов и взаимопомощи без потери самостоятельности и собственного устава
       features:
@@ -94,4 +93,3 @@ participation:
       button:
         label: Участвовать
         variant: subtle
-        to: '#'
