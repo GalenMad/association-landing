@@ -31,7 +31,7 @@ async function copyEmail() {
   >
     <slot />
     <template #body>
-      <div class="w-[360px] mx-auto flex gap-6 flex-col">
+      <div class="mx-auto flex gap-6 flex-col">
         <UTooltip
           v-model:open="tooltipOpen"
           :text="copied ? 'Почта скопирована' : 'Скопировать почту'"
