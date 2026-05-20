@@ -18,6 +18,9 @@ export default defineNuxtConfig({
       noApiRoute: false
     }
   },
+  ui: {
+    fonts: false
+  },
 
   compatibilityDate: '2025-01-15',
 

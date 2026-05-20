@@ -32,14 +32,6 @@ const items = computed(() => [
     trailing: true
   }
 ] satisfies ButtonProps[])
-
-const contactUsButton = {
-  label: 'Написать нам',
-  icon: 'i-lucide-mail',
-  trailing: true,
-  color: 'neutral',
-  variant: 'subtle'
-} satisfies ButtonProps
 </script>
 
 <template>
@@ -56,7 +48,7 @@ const contactUsButton = {
     >
       <template #title>
         <MDC
-          value="Концепция ассоциации кооперативов ПиВКО"
+          value="Концепция ассоциации ПиВКО"
           class="sm:*:leading-11"
         />
       </template>
@@ -75,7 +67,10 @@ const contactUsButton = {
       class="overflow-hidden @container"
     >
       <template #title>
-        <MDC value="Готовы поверить в кооперацию?" />
+        <MDC
+          value="Готовы поверить в кооперацию?"
+          :links="page.hero.links"
+        />
 
         <div class="@max-[1280px]:hidden">
           <UColorModeImage
@@ -89,19 +84,6 @@ const contactUsButton = {
             class="absolute right-0 bottom-0 h-full"
           />
         </div>
-      </template>
-      <template #links>
-        <UButton
-          v-for="item, index in items"
-          :key="index"
-          v-bind="item"
-        />
-        <ContactUsModal>
-          <UButton
-            v-bind="contactUsButton"
-            @click.prevent
-          />
-        </ContactUsModal>
       </template>
 
       <LazyStarsBg />

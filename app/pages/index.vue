@@ -11,7 +11,7 @@ const list = [
       Описать, кто и как может входить в Ассоциацию: кооператив, физлицо-сторонник, рабочая группа, инициатор.
       Зафиксировать формат участия для каждой роли
     `,
-    icon: 'lucide:pencil-ruler',
+    icon: 'lucide:frame',
     badge: 'Роли и статусы'
   },
   {
@@ -27,7 +27,7 @@ const list = [
     description: `
       Зафиксировать, какие обязательства участник берёт на себя перед Ассоциацией и другими участниками
     `,
-    icon: 'lucide:brain-circuit',
+    icon: 'lucide:pencil-ruler',
     badge: 'Общие обязательства'
   },
   {
@@ -78,24 +78,8 @@ useSeoMeta({
         <MDC
           :value="page.hero.title"
           unwrap="p"
+          :links="page.hero.links"
         />
-      </template>
-
-      <template #links>
-        <template
-          v-for="link, index in page.hero.links"
-          :key="index"
-        >
-          <UButton
-            v-bind="link"
-          />
-        </template>
-        <ContactUsModal>
-          <UButton
-            v-bind="page.hero.contact"
-            @click.prevent
-          />
-        </ContactUsModal>
       </template>
     </UPageHero>
 
@@ -130,7 +114,7 @@ useSeoMeta({
           :light="page.targets.image?.light"
           :dark="page.targets.image?.dark"
           :alt="page.targets.title"
-          class="size-full"
+          class="size-full max-w-[840px] ml-auto"
         />
       </div>
     </UPageSection>
@@ -245,7 +229,10 @@ useSeoMeta({
       class="overflow-hidden"
       :title="page.participation.title"
       :description="page.participation.description"
-      :ui="{ title: 'text-left @container relative', description: 'text-left' }"
+      :ui="{
+        title: 'text-left @container relative',
+        description: 'text-left'
+      }"
     >
       <template #title>
         <MDC :value="page.participation.title" />
@@ -265,6 +252,9 @@ useSeoMeta({
           :key="index"
           :title="plan.title"
           :description="plan.description"
+          :ui="{
+            featureTitle: 'whitespace-normal'
+          }"
           :price="plan.price"
           :billing-period="plan.billing_period"
           :billing-cycle="plan.billing_cycle"
@@ -273,16 +263,7 @@ useSeoMeta({
           variant="soft"
           :features="plan.features"
           :button="plan.button"
-        >
-          <template #button>
-            <ContactUsModal>
-              <UButton
-                v-bind="plan.button"
-                @click.prevent
-              />
-            </ContactUsModal>
-          </template>
-        </UPricingPlan>
+        />
       </UPricingPlans>
       <UCard variant="subtle">
         <template #header>
