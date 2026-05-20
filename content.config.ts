@@ -31,6 +31,19 @@ export const collections = {
     type: 'page',
     schema: z.object({
       contactEmail: z.string(),
+      cryptoWallets: z.array(z.object({
+        key: z.string(),
+        title: z.string(),
+        address: z.string(),
+        icon: z.string().optional()
+      })),
+      donationLinks: z.array(z.object({
+        title: z.string(),
+        description: z.string(),
+        href: z.string(),
+        icon: z.string().optional(),
+        primaryColor: z.string().optional()
+      })),
       hero: z.object({
         headline: z.string(),
         title: z.string(),

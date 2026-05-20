@@ -3,6 +3,14 @@
 
 @source "../../../content/**/*";
 
+/**
+ * Эта история нужна для подтягивания цветов при
+ * автогенерации классов по ключевым словам цветов
+ * в DonationBlock используется
+ */
+@source inline("bg-{red,orange,amber,yellow,lime,green,emerald,teal,cyan,sky,blue,indigo,violet,purple,fuchsia,pink,rose,slate,gray,zinc,neutral,stone}-300");
+@source inline("hover:bg-{red,orange,amber,yellow,lime,green,emerald,teal,cyan,sky,blue,indigo,violet,purple,fuchsia,pink,rose,slate,gray,zinc,neutral,stone}-300/90");
+
 @theme static {
   --font-heading: "Montserrat", sans-serif;
   --color-brand-50: #F4FBEA;

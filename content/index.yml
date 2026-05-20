@@ -2,6 +2,30 @@ seo:
   title: Ассоциация кооперативов
   description: Помогаем кооперативам удобно и предсказуемо сотрудничать через общие правила, сервисы и инфраструктуру
 contactEmail: pivko@na40.ru
+donationLinks:
+  - title: Т-Банк
+    icon: arcticons:tinkoffbiz
+    description: Перевод по ссылке
+    href: https://www.tbank.ru/cf/PLACEHOLDER
+    primaryColor: yellow
+  - title: ЮMoney
+    icon: arcticons:yoomoney
+    description: Картой или кошельком
+    href: https://yoomoney.ru/to/PLACEHOLDER
+    primaryColor: purple
+cryptoWallets:
+  - key: usdt-trc20
+    title: USDT TRC20
+    address: TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    icon: simple-icons:tether
+  - key: ton
+    title: TON
+    address: EQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    icon: simple-icons:ton
+  - key: btc
+    title: BTC
+    address: bc1qxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    icon: simple-icons:bitcoin
 hero:
   title: Кооперативам выгоднее вместе
   description: "Помогаем кооперативам удобно и предсказуемо сотрудничать через общие правила, сервисы и инфраструктуру"

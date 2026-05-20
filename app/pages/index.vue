@@ -295,10 +295,14 @@ useSeoMeta({
           <div class="text-highlighted text-2xl sm:text-3xl text-pretty font-semibold mb-2">
             Для сочувствующих
           </div>
-          <div class="text-muted text-base text-pretty mt-2">
+          <div class="text-muted text-base text-pretty mt-2 mb-4">
             Для тех, кто разделяет идею ассоциации и хочет помочь её запуску деньгами. <br>
             Такая поддержка не менее важна для нас, она ускоряет развитие общей инфраструктуры
           </div>
+          <DonationBlock
+            :crypto-wallets="page.cryptoWallets"
+            :donation-links="page.donationLinks"
+          />
         </template>
       </UCard>
     </UPageSection>
