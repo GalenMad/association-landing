@@ -30,6 +30,7 @@ export const collections = {
     source: 'index.yml',
     type: 'page',
     schema: z.object({
+      contactEmail: z.string(),
       hero: z.object({
         headline: z.string(),
         title: z.string(),

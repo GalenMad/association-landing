@@ -78,8 +78,24 @@ useSeoMeta({
         <MDC
           :value="page.hero.title"
           unwrap="p"
-          :links="page.hero.links"
         />
+      </template>
+
+      <template #links>
+        <template
+          v-for="link, index in page.hero.links"
+          :key="index"
+        >
+          <UButton
+            v-bind="link"
+          />
+        </template>
+        <ContactUsModal :email="page.contactEmail">
+          <UButton
+            v-bind="page.hero.contact"
+            @click.prevent
+          />
+        </ContactUsModal>
       </template>
     </UPageHero>
 
@@ -263,7 +279,16 @@ useSeoMeta({
           variant="soft"
           :features="plan.features"
           :button="plan.button"
-        />
+        >
+          <template #button>
+            <ContactUsModal :email="page.contactEmail">
+              <UButton
+                v-bind="plan.button"
+                @click.prevent
+              />
+            </ContactUsModal>
+          </template>
+        </UPricingPlan>
       </UPricingPlans>
       <UCard variant="subtle">
         <template #header>

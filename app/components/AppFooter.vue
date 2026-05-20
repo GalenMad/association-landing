@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <USeparator
     icon="i-lucide-hop"
