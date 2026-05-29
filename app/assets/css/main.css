@@ -3,6 +3,12 @@
 
 @source "../../../content/**/*";
 
+html:not(.dark),
+html:not(.dark) body,
+html:not(.dark) #__nuxt {
+  background: #fffdf8;
+}
+
 /**
  * Эта история нужна для подтягивания цветов при
  * автогенерации классов по ключевым словам цветов

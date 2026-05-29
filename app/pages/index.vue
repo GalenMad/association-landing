@@ -269,7 +269,8 @@ useSeoMeta({
           :title="plan.title"
           :description="plan.description"
           :ui="{
-            featureTitle: 'whitespace-normal'
+            featureTitle: 'whitespace-normal',
+            root: 'ring ring-default'
           }"
           :price="plan.price"
           :billing-period="plan.billing_period"
