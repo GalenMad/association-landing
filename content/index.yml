@@ -6,7 +6,7 @@ donationLinks:
   - title: Т-Банк
     icon: arcticons:tinkoffbiz
     description: Перевод по ссылке
-    href: https://www.tbank.ru/cf/PLACEHOLDER
+    href: __DONATION_TBANK_URL__
     primaryColor: yellow
   - title: ЮMoney
     icon: arcticons:yoomoney
