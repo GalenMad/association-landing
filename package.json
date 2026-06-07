@@ -3,8 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "node scripts/inject-secrets.mjs",
-    "build": "nuxt build",
+    "build": "node scripts/inject-secrets.mjs && nuxt build",
     "dev": "nuxt dev",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
