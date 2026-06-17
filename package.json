@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/inject-secrets.mjs && nuxt build",
+    "static": "node scripts/inject-secrets.mjs && nuxt build --prerender",
     "dev": "nuxt dev",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
