@@ -18,8 +18,8 @@ cryptoWallets:
     title: USDT TRC20
     address: TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     icon: simple-icons:tether
-  - key: ton
-    title: TON
+  - key: gram
+    title: GRAM
     address: EQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     icon: simple-icons:ton
   - key: btc
