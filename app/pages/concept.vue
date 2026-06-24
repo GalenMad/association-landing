@@ -98,7 +98,7 @@ const contactUsButton = {
           :key="index"
           v-bind="item"
         />
-        <ContactUsModal :email="page.contactEmail">
+        <ContactUsModal :email="page.contactData.contactEmail">
           <UButton
             v-bind="contactUsButton"
             @click.prevent

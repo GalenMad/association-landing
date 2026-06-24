@@ -13,7 +13,7 @@ useHead({
     { rel: 'icon', href: '/favicon.png' }
   ],
   htmlAttrs: {
-    lang: 'en'
+    lang: 'ru'
   }
 })
 

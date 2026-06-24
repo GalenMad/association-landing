@@ -1,7 +1,9 @@
 seo:
   title: Ассоциация кооперативов
   description: Помогаем кооперативам удобно и предсказуемо сотрудничать через общие правила, сервисы и инфраструктуру
-contactEmail: pivko@na40.ru
+contactData:
+  contactEmail: pivko@na40.ru
+  policyLink: https://na40.ru/policy
 donationLinks:
   - title: Т-Банк
     icon: arcticons:tinkoffbiz

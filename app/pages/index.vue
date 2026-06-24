@@ -90,7 +90,7 @@ useSeoMeta({
             v-bind="link"
           />
         </template>
-        <ContactUsModal :email="page.contactEmail">
+        <ContactUsModal :email="page.contactData.contactEmail">
           <UButton
             v-bind="page.hero.contact"
             @click.prevent
@@ -282,7 +282,7 @@ useSeoMeta({
           :button="plan.button"
         >
           <template #button>
-            <ContactUsModal :email="page.contactEmail">
+            <ContactUsModal :email="page.contactData.contactEmail">
               <UButton
                 v-bind="plan.button"
                 @click.prevent

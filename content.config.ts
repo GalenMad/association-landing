@@ -30,7 +30,10 @@ export const collections = {
     source: 'index.yml',
     type: 'page',
     schema: z.object({
-      contactEmail: z.string(),
+      contactData: z.object({
+        contactEmail: z.string(),
+        policyLink: z.string()
+      }),
       cryptoWallets: z.array(z.object({
         key: z.string(),
         title: z.string(),
